@@ -26,6 +26,8 @@ const STATIC_ROUTES = [
   '/work',
 ];
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const serviceRoutes = SERVICES.items.map((s) => `/services/${s.slug}`);
   const now = new Date();

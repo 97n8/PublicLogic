@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import Image from 'next/image';
+import { withBasePath } from '../../../lib/base-path';
 import Link from 'next/link';
 import { Cta } from '../../../components/site/Bits';
 import { APPLICATIONS, SERVICES, META } from '../../../lib/site-content';
@@ -44,13 +44,13 @@ export default function ApplicationsHub() {
           <h1>{APPLICATIONS.hero.headline}</h1>
           <p>{APPLICATIONS.hero.body}</p>
         </div>
-        <Image
+        <img
           className="pl-hero-image"
-          src="/applications-toolbox.png"
+          src={withBasePath('/applications-toolbox.png')}
           alt="A toolbox holding icons for documents, calendars, search, links, notes, and charts"
           width={1680}
           height={952}
-          priority
+          fetchPriority="high"
         />
       </div>
 
@@ -106,9 +106,9 @@ export default function ApplicationsHub() {
       <section className="pl-runtime" aria-labelledby="runtime-heading">
         <div className="pl-runtime-copy">
           <div className="pl-doctrine-head">
-            <Image
+            <img
               className="pl-doctrine-mark"
-              src="/puddlejumper-mascot.png"
+              src={withBasePath('/puddlejumper-mascot.png')}
               alt=""
               width={96}
               height={64}
