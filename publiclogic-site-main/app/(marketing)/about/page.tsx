@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Hero, Cta } from '../../../components/site/Bits';
 import { ABOUT, META } from '../../../lib/site-content';
 import { pageMeta } from '../../../lib/seo';
+import { withBasePath } from '../../../lib/base-path';
 
 export const metadata: Metadata = pageMeta('/about', META.about.title, META.about.description);
 
@@ -65,7 +66,7 @@ export default function About() {
         <div className="pl-field-gallery">
           {ABOUT.photos.items.map((p) => (
             <figure key={p.src}>
-              <img src={p.src} alt={p.alt} loading="lazy" />
+              <img src={withBasePath(p.src)} alt={p.alt} loading="lazy" />
               <figcaption>{p.alt}</figcaption>
             </figure>
           ))}
