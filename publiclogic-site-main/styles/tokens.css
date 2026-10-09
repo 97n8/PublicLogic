@@ -1,0 +1,45 @@
+/* PublicLogic marketing brand tokens — locked.
+ *
+ * Source: PublicLogic_Website_Rerelease_Workbook_v1.4.xlsx, "BRAND TOKENS" tab
+ * (August 2026). Values are locked — hand this file to the build directly. */
+
+:root {
+  /* Surface scale */
+  --bg:   #ffffff; /* Paper */
+  --s0:   #ffffff; /* Paper */
+  --s1:   #f2f5f8; /* Shallow */
+  --s2:   #e8edf2; /* Shallow, one step darker for nested cards */
+  --bd:   #bfc9d4;
+  --bd2:  #9aa8b8;
+
+  /* Ink (Harbor Navy scale) */
+  --ink:  #0a1e3c; /* Harbor Navy */
+  --ink2: #33465f;
+  --ink3: #5a6b80;
+  --ink4: #8b98a8;
+
+  /* Accent (Bill Gold -- CTAs, waterline device; use sparingly) */
+  --g:     #e9be5c;
+  --g-lt:  #fbf3e2;
+  --g-bd:  #d9b86b;
+  --g-mid: #d1a83e;
+
+  /* Wordmark / mark greens -- lockup only, never a UI accent */
+  --wordmark-green: #427353; /* Mallard Green */
+  --mark-green:      #3c6e47; /* Duck Head Green */
+
+  /* Status accents */
+  --amber: #8a6010; /* coming soon / warning */
+  --red:   #8b2a1a; /* error / urgent */
+
+  /* Type */
+  --display: "IBM Plex Sans", system-ui, sans-serif;
+  --ui:      "IBM Plex Sans", system-ui, sans-serif;
+  --mono:    "IBM Plex Mono", ui-monospace, monospace;
+  --serif:   "IBM Plex Serif", Georgia, serif;
+
+  /* Layout */
+  --rail-w:    48px;
+  --sidebar-w: 196px;
+  --detail-w:  340px;
+}

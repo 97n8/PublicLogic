@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+/* Tailwind v4 theme block — utilities stay aligned with the locked tokens. */
+@theme {
+  --color-bg:    var(--bg);
+  --color-s0:    var(--s0);
+  --color-s1:    var(--s1);
+  --color-s2:    var(--s2);
+  --color-bd:    var(--bd);
+  --color-bd2:   var(--bd2);
+  --color-ink:   var(--ink);
+  --color-ink2:  var(--ink2);
+  --color-ink3:  var(--ink3);
+  --color-ink4:  var(--ink4);
+  --color-g:     var(--g);
+  --color-g-lt:  var(--g-lt);
+  --color-g-bd:  var(--g-bd);
+  --color-g-mid: var(--g-mid);
+  --color-amber: var(--amber);
+  --color-red:   var(--red);
+
+  --font-display: var(--display);
+  --font-ui:      var(--ui);
+  --font-mono:    var(--mono);
+  --font-serif:   var(--serif);
+}
+
+@layer base {
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--ui);
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+
+  code, pre, .mono {
+    font-family: var(--mono);
+  }
+}
