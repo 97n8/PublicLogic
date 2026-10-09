@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BRAND, NAV } from '../../lib/site-content';
+import { withBasePath } from '../../lib/base-path';
 
 function isActivePath(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
@@ -70,7 +71,7 @@ export default function Nav() {
     <header className="pl-nav" data-open={open ? 'true' : 'false'} data-scrolled={scrolled ? 'true' : 'false'}>
       <div className="pl-nav-inner">
         <Link href="/" className="pl-brand" aria-label={BRAND.wordmark}>
-          <img src="/logo.png" alt="PublicLogic" className="pl-logo" width={2092} height={748} />
+          <img src={withBasePath('/logo.png')} alt="PublicLogic" className="pl-logo" width={2092} height={748} />
         </Link>
 
         <button
